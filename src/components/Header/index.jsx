@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import darklogo from '../../assets/darklogo.png'
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
   font-family: 'Comfortaa';
   font-weight: 700;
@@ -16,6 +16,8 @@ const StyledLink = styled(Link)`
   ${(props) =>
     props.$isFullLink &&
     `color: white; border-radius: 30px; background-color: ${colors.primary};`}
+  ${(props) =>
+    props.$isHomeBtn && `position: absolute; left: 91px; top: 556px;`}
 `
 
 const StyledImage = styled.img`
