@@ -8,8 +8,12 @@ const Survey = () => {
   const nextQuestionNumber = questionNumberInt + 1
   return (
     <div>
-      <h1>Survey</h1>
       <h2>Question {questionNumber}</h2>
+      <p>Do you need your application to appear first in search results?</p>
+      <div>
+        <button>Yes</button>
+        <button>No</button>
+      </div>
       <Link to={`/survey/${prevQuestionNumber}`}>Back</Link>
       {questionNumberInt === 10 ? (
         <Link to="results">Results</Link>
