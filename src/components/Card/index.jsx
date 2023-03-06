@@ -1,27 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DefaultPicture from '../../assets/lilyImg.png'
+import styled from 'styled-components'
+
+const CardLabel = styled.span`
+  color: #5843e4;
+  font-size: 22px;
+  font-weight: bold;
+`
+
+const CardImage = styled.img`
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+`
 
 const Card = ({ label, title, picture }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-      <span>{label}</span>
-      <img src={picture} alt="frelancer" height={80} width={80}></img>
+      <CardLabel>{label}</CardLabel>
+      <CardImage src={picture} alt="frelancer"/>
       <span>{title}</span>
     </div>
   )
 }
 
 Card.propTypes = {
-    label: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
 }
 
 Card.defaultProps = {
-    label: '',
-    title: '',
-    picture: DefaultPicture
+  label: '',
+  title: '',
+  picture: DefaultPicture,
 }
 
 export default Card
