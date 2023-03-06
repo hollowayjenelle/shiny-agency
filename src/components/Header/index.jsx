@@ -9,6 +9,7 @@ const StyledLink = styled(Link)`
   color: #8186a0;
   text-decoration: none;
   font-size: 20px;
+  margin-right: 24px;
   ${(props) =>
     props.$isFullLink &&
     `color: white; border-radius: 30px; background-color: ${colors.primary};`}
@@ -19,16 +20,24 @@ const StyledImage = styled.img`
   height: 70px;
 `
 
+const StyledNav = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
 const Header = () => {
   return (
-    <nav>
+    <StyledNav>
       <StyledImage src={darklogo} alt="company logo" />
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/freelancers">Profiles</StyledLink>
-      <StyledLink to="/survey/1" $isFullLink>
-        Survey
-      </StyledLink>
-    </nav>
+      <div>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/freelancers">Profiles</StyledLink>
+        <StyledLink to="/survey/1" $isFullLink>
+          Take the survey
+        </StyledLink>
+      </div>
+    </StyledNav>
   )
 }
 
