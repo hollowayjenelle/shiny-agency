@@ -5,6 +5,9 @@ import colors from '../../utils/style/colors'
 import darklogo from '../../assets/darklogo.png'
 
 const StyledLink = styled(Link)`
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+  font-family: 'Comfortaa';
+  font-weight: 700;
   padding: 15px;
   color: #8186a0;
   text-decoration: none;
