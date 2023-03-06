@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import DefaultPicture from '../../assets/lilyImg.png'
 
 const Card = ({ label, title, picture }) => {
   return (
@@ -8,6 +10,18 @@ const Card = ({ label, title, picture }) => {
       <span>{title}</span>
     </div>
   )
+}
+
+Card.propTypes = {
+    label: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired
+}
+
+Card.defaultProps = {
+    label: '',
+    title: '',
+    picture: DefaultPicture
 }
 
 export default Card
