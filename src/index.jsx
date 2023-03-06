@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Survey from './pages/Survey';
 import Header from './components/Header'
+import Error from './components/Error';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/survey' element={<Survey/>}/>
+        <Route path='/*' element={<Error/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
