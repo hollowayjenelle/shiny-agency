@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import DefaultPicture from '../../assets/lilyImg.png'
+import DefaultPicture from '../../assets/profile.png'
 import Card from '../../components/Card'
 
 const freelancerProfiles = [
