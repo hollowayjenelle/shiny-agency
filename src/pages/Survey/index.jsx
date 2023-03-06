@@ -10,7 +10,7 @@ const Survey = () => {
         <div>
             <h1>Survey</h1>
             <h2>Question {questionNumber}</h2>
-            <Link to={`/survey/${prevQuestionNumber}`} style={{pointerEvents: questionNumber === 1 ? 'none' : ''}}>Back</Link>
+            <Link to={`/survey/${prevQuestionNumber}`}>Back</Link>
             {questionNumberInt === 10 ? <Link to='results'>Results</Link> : <Link to={`/survey/${nextQuestionNumber}`}>Next</Link>}
         </div>
     );

@@ -6,7 +6,7 @@ import Survey from './pages/Survey';
 import Header from './components/Header'
 import Error from './components/Error';
 import Results from './pages/Results'
-import Freelancers from '.pages/Freelancers'
+import Freelancers from './pages/Freelancers'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
